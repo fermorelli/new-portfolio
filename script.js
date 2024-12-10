@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
 document.querySelector('a[href="#about"]').addEventListener('click', event => {
     event.preventDefault();
     const aboutSection = document.querySelector('#about');
-    const offset = aboutSection.getBoundingClientRect().top + window.scrollY - 50; // Ajusta los 50px según lo necesario
+    const offset = aboutSection.getBoundingClientRect().top + window.scrollY - 50;
     window.scrollTo({
         top: offset,
         behavior: 'smooth'

@@ -354,6 +354,7 @@ h1 {
     background-size: cover;
     background-position: center;
     transition: background 4s ease-in-out;
+    padding: 0px 20px;
 }
 
 .contact.visible {
@@ -434,17 +435,21 @@ h1 {
         font-size: 18px;
         margin-right: 5px;
     }
-    .section-container {
-        width: 100%;
-        flex-direction: column;
-        gap: 50px;
-    }
-    .profile-pic, .body-text{
-        width: 70%;
-    }
     .about{
         padding: 0 15px;
     }
+    .section-container{
+        width: 90%;
+    }
+
+    .profile-pic {
+        width: 60%;
+    }
+
+    .body-text{
+        width: 40%;
+    }
+
 }
 
 @media (max-width: 1024px) {
@@ -460,6 +465,24 @@ h1 {
     .icons a img {
         width: 20px;
     }
+
+}
+
+@media (max-width: 900px){
+    .section-container{
+        flex-direction: column;
+        width: 100%;
+        gap: 50px;
+    }
+
+    .profile-pic, .body-text {
+        width: 100%;
+    }
+
+    .about,.projects{
+        padding: 0 25px;
+    }
+
 }
 
 @media (max-width: 768px) {
@@ -483,16 +506,28 @@ h1 {
         width: 18px;
     }
 
-    .profile-pic, .body-text{
+    .body-text{
         width: 100%;;
+    }
+
+    .profile-pic {
+        width: 80%;
+    }
+
+    .body-text {
+        text-align: center;
     }
 
     .projects-container {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .about,.projects{
-        padding: 100px 25px;
+    .profile-pic img {
+        width: 100%;
+    }
+
+    .about, .projects {
+        padding: 50px 15px;
     }
 
 }
@@ -512,7 +547,7 @@ h1 {
     }
 
     .cta a {
-        padding: 8px 6px;
+        padding: 8px 16px;
         font-size: 12px;
     }
 
