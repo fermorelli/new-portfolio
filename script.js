@@ -2,7 +2,7 @@ document.querySelector('.headline').addEventListener('animationend', () => {
     document.querySelector('.headline').classList.add('animation-ended');
     document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
-        const bannerIntro = document.querySelector(".banner-intro");
+        const bannerIntro = document.querySelector("#intro");
         if (bannerIntro) {
             bannerIntro.style.backgroundImage = 'url("background.svg")';
             bannerIntro.style.backgroundRepeat = "no-repeat";
