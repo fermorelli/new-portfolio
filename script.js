@@ -82,6 +82,33 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
+    const codingSection = document.querySelector("#coding");
+    const codingHeadlines = document.querySelector(".coding-headlines");
+    const codingContainer = document.querySelector(".coding-projects-container");
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                codingSection.classList.add("visible");
+                codingHeadlines.classList.add("visible");
+                codingContainer.classList.add("visible");
+            }
+        });
+    }, {
+        root: null,
+        threshold: 0.1
+    });
+    setTimeout(() => {
+        if (codingSection) {
+            codingSection.style.backgroundImage = 'url("/background-right.svg")';
+            codingSection.style.backgroundRepeat = "no-repeat";
+        }
+    }, 3000);
+
+    observer.observe(codingSection);
+});
+
+document.addEventListener("DOMContentLoaded", () => {
     const contactSection = document.querySelector("#contact");
     const sectionHeadlines = document.querySelector(".contact-headlines");
     const singleCards = document.querySelectorAll(".single-card");
