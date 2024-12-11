@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.querySelector('a[href="#about"]').addEventListener('click', event => {
-    if (window.innerWidth > 768) { // Solo se ejecuta si no es en mobile
+    if (window.innerWidth > 768) {
         event.preventDefault();
         const aboutSection = document.querySelector('#about');
         const offset = aboutSection.getBoundingClientRect().top + window.scrollY - 50;
@@ -111,12 +111,11 @@ document.addEventListener("DOMContentLoaded", () => {
             if (entry.isIntersecting) {
                 contactSection.classList.add("visible");
                 sectionHeadlines.classList.add("visible");
-                
-                // Para las tarjetas de contacto, agregar la clase visible una a una
+
                 singleCards.forEach((card, index) => {
                     setTimeout(() => {
                         card.classList.add("visible");
-                    }, 200 * index); // Desfase entre tarjetas
+                    }, 200 * index);
                 });
             }
             setTimeout(() => {
