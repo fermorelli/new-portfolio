@@ -4,7 +4,7 @@ document.querySelector('.headline').addEventListener('animationend', () => {
     setTimeout(() => {
         const bannerIntro = document.querySelector(".banner-intro");
         if (bannerIntro) {
-            bannerIntro.style.backgroundImage = 'url("/background.svg")';
+            bannerIntro.style.backgroundImage = 'url("background.svg")';
             bannerIntro.style.backgroundRepeat = "no-repeat";
         }
     }, 3000);
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 bodyText.classList.add("visible");
 
                 setTimeout(() => {
-                    aboutSection.style.backgroundImage = 'url("/background-right.svg")';
+                    aboutSection.style.backgroundImage = 'url("background-right.svg")';
                 }, 1000);
             }
         });
@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     setTimeout(() => {
         if (codingSection) {
-            codingSection.style.backgroundImage = 'url("/background-right.svg")';
+            codingSection.style.backgroundImage = 'url("background-right.svg")';
             codingSection.style.backgroundRepeat = "no-repeat";
         }
     }, 3000);
@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
             setTimeout(() => {
                 const contactSection = document.querySelector("#contact");
                 if (contactSection) {
-                    contactSection.style.backgroundImage = 'url("/background.svg")';
+                    contactSection.style.backgroundImage = 'url("background.svg")';
                     contactSection.style.backgroundRepeat = "no-repeat";
                 }
             }, 3000);
