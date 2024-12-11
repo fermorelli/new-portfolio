@@ -1,21 +1,12 @@
 document.querySelector('.headline').addEventListener('animationend', () => {
     document.querySelector('.headline').classList.add('animation-ended');
-    document.addEventListener("DOMContentLoaded", () => {
-    setTimeout(() => {
-        const bannerIntro = document.querySelector("#intro");
-        if (bannerIntro) {
-            bannerIntro.style.backgroundImage = 'url("background.svg")';
-            bannerIntro.style.backgroundRepeat = "no-repeat";
-        }
-    }, 3000);
-    });
 });
 
 document.addEventListener("DOMContentLoaded", () => {
     const bannerIntro = document.querySelector(".banner-intro");
 
     setTimeout(() => {
-        bannerIntro.style.backgroundImage = 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/background.svg")';
+        bannerIntro.style.backgroundImage = 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("background.svg")';
         bannerIntro.style.backgroundRepeat = 'no-repeat';
         bannerIntro.style.backgroundSize = 'cover';
         bannerIntro.style.backgroundPosition = 'center';
