@@ -50,15 +50,17 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(aboutSection);
 });
 
-// document.querySelector('a[href="#about"]').addEventListener('click', event => {
-//     event.preventDefault();
-//     const aboutSection = document.querySelector('#about');
-//     const offset = aboutSection.getBoundingClientRect().top + window.scrollY - 50;
-//     window.scrollTo({
-//         top: offset,
-//         behavior: 'smooth'
-//     });
-// });
+document.querySelector('a[href="#about"]').addEventListener('click', event => {
+    if (window.innerWidth > 768) { // Solo se ejecuta si no es en mobile
+        event.preventDefault();
+        const aboutSection = document.querySelector('#about');
+        const offset = aboutSection.getBoundingClientRect().top + window.scrollY - 50;
+        window.scrollTo({
+            top: offset,
+            behavior: 'smooth'
+        });
+    }
+});
 
 document.addEventListener("DOMContentLoaded", () => {
     const projectsSection = document.querySelector("#projects");

@@ -123,19 +123,21 @@ h1 {
 
 .icons{
     display: flex;
-    gap: 10px;
+    gap: 15px;
     justify-content: center;
     align-items: center;
 }
 
-.icons a img {
+.icons a svg{
     width: 25px;
     filter: invert(1);
     transition: all ease 300ms;
 }
 
-.icons a:hover img {
+.icons a:hover svg {
     transform: scale(1.05);
+    fill:rgb(5, 52, 182);
+
 }
 
 #about-me{
@@ -147,7 +149,7 @@ h1 {
 }
 
 #about-me:hover {
-    color: rgb(25, 182, 255)
+    color: rgb(250, 203, 73)
 }
 
 /*-------------------ABOUT*/
