@@ -50,15 +50,15 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(aboutSection);
 });
 
-document.querySelector('a[href="#about"]').addEventListener('click', event => {
-    event.preventDefault();
-    const aboutSection = document.querySelector('#about');
-    const offset = aboutSection.getBoundingClientRect().top + window.scrollY - 50;
-    window.scrollTo({
-        top: offset,
-        behavior: 'smooth'
-    });
-});
+// document.querySelector('a[href="#about"]').addEventListener('click', event => {
+//     event.preventDefault();
+//     const aboutSection = document.querySelector('#about');
+//     const offset = aboutSection.getBoundingClientRect().top + window.scrollY - 50;
+//     window.scrollTo({
+//         top: offset,
+//         behavior: 'smooth'
+//     });
+// });
 
 document.addEventListener("DOMContentLoaded", () => {
     const projectsSection = document.querySelector("#projects");
@@ -74,8 +74,8 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     }, {
-        root: null,          // Observa en el viewport
-        threshold: 0.1       // Dispara la animación cuando el 10% sea visible
+        root: null,
+        threshold: 0.1
     });
 
     observer.observe(projectsSection);

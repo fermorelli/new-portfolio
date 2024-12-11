@@ -648,8 +648,13 @@ h1 {
         font-size: 12px;
     }
 
+    .icons {
+        gap: 15px;
+        margin-bottom: 10px;
+    }
+
     .icons a img {
-        width: 16px;
+        width: 20px;
     }
 
     .projects-container {
