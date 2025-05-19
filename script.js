@@ -32,11 +32,11 @@ document.addEventListener("DOMContentLoaded", () => {
     // Banner Intro Animation
     setTimeout(() => {
         const { bannerIntro } = elements;
-        bannerIntro.style.backgroundImage = 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("background.svg")';
+        bannerIntro.style.backgroundImage = 'linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url("background.svg")';
         bannerIntro.style.backgroundRepeat = 'no-repeat';
         bannerIntro.style.backgroundSize = 'cover';
         bannerIntro.style.backgroundPosition = 'center';
-        bannerIntro.style.transition = "background-image 3s ease-in-out, opacity 3s ease-in-out";
+        bannerIntro.style.transition = "background-image 4s ease-in-out, opacity 4s ease-in-out";
         bannerIntro.style.opacity = "1";
     }, 6000);
 
