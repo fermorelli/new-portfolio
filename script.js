@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const observerCallback = (entries, section) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                switch(section) {
+                switch (section) {
                     case 'about':
                         const { section: aboutSection, headlines, profilePic, bodyText } = elements.about;
                         [aboutSection, headlines, profilePic, bodyText].forEach(el => el.classList.add("visible"));
@@ -117,3 +117,16 @@ document.addEventListener("DOMContentLoaded", () => {
     contactObserver.observe(elements.contact.section);
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const details = document.querySelectorAll('.body-text .text-card');
+
+    details.forEach(d => {
+        d.addEventListener('toggle', () => {
+            if (d.open) {
+                details.forEach(other => {
+                    if (other !== d) other.removeAttribute('open');
+                });
+            }
+        });
+    });
+});
