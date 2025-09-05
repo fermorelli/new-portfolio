@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
@@ -75,10 +75,12 @@ h1 {
     0% {
         background-position-x: -500%;
     }
+
     90% {
         -webkit-text-fill-color: transparent;
         background-position-x: 500%;
     }
+
     100% {
         -webkit-text-fill-color: #ffffff;
     }
@@ -96,7 +98,7 @@ h1 {
     align-items: center;
 }
 
-.headline.animation-ended ~ .socials {
+.headline.animation-ended~.socials {
     opacity: 1;
     transform: translateY(0);
 }
@@ -122,14 +124,14 @@ h1 {
     transition: all 0.3s ease;
 }
 
-.icons{
+.icons {
     display: flex;
     gap: 15px;
     justify-content: center;
     align-items: center;
 }
 
-.icons a svg{
+.icons a svg {
     width: 25px;
     filter: invert(1);
     transition: all ease 300ms;
@@ -137,11 +139,11 @@ h1 {
 
 .icons a:hover svg {
     transform: scale(1.05);
-    fill:rgb(5, 52, 182);
+    fill: rgb(5, 52, 182);
 
 }
 
-#about-me{
+#about-me {
     text-decoration: none;
     text-transform: uppercase;
     font-size: 12px;
@@ -155,7 +157,7 @@ h1 {
 
 /*-------------------ABOUT*/
 
-.about{
+.about {
     box-sizing: border-box;
     width: 100%;
     width: 100vw;
@@ -200,7 +202,7 @@ h1 {
     align-items: center;
 }
 
-.profile-pic{
+.profile-pic {
     width: 40%;
     display: flex;
     align-items: end;
@@ -213,12 +215,12 @@ h1 {
 .profile-pic img {
     width: 70%;
     border-radius: 500px;
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.11);
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.11);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.11);
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.11);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.11);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.11);
 }
 
-.body-text{
+.body-text {
     font-weight: 300;
     line-height: 22px;
     width: 40%;
@@ -245,6 +247,72 @@ h1 {
 .body-text.visible {
     opacity: 1;
     transform: translateX(0);
+}
+
+.text-card {
+    border: 1px solid white;
+    color: white;
+    margin-bottom: 10px;
+    background: transparent;
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    overflow: hidden;
+}
+
+.text-card:hover {
+    background: white;
+    color: black;
+    border-color: white;
+}
+
+.text-card[open] {
+    background: white;
+    color: black;
+    border-color: white;
+}
+
+.text-card:hover *,
+.text-card[open] * {
+    color: inherit;
+}
+
+.text-card>summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    outline: none;
+}
+
+.text-card>summary::-webkit-details-marker {
+    display: none;
+}
+
+.text-card>summary h3 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.text-card>summary::after {
+    content: "+";
+    font-weight: 700;
+    transition: transform 0.25s ease;
+}
+
+.text-card[open]>summary::after {
+    transform: rotate(45deg);
+}
+
+.text-card>p {
+    padding: 0 20px 18px 20px;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.text-card>summary:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
 }
 
 /*------------MY PROJECTS-------------------*/
@@ -295,7 +363,6 @@ h1 {
 .project {
     text-align: center;
     background: #f4f4f4;
-    border-radius: 8px;
     padding: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     color: #333;
@@ -310,7 +377,6 @@ h1 {
 
 .project img {
     max-width: 100%;
-    border-radius: 8px;
 }
 
 .project p {
@@ -392,7 +458,6 @@ h1 {
 .coding-project {
     text-align: center;
     background: #f4f4f4;
-    border-radius: 8px;
     padding: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     color: #333;
@@ -407,7 +472,6 @@ h1 {
 
 .coding-project img {
     max-width: 100%;
-    border-radius: 8px;
 }
 
 .coding-project p {
@@ -495,7 +559,6 @@ h1 {
     justify-content: center;
     padding: 20px;
     background-color: #fff;
-    border-radius: 10px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
@@ -524,20 +587,23 @@ h1 {
 
 /*-------------------QUERIES*/
 
-@media(max-width:1400px){
+@media(max-width:1400px) {
 
-    .hello{
+    .hello {
         font-size: 18px;
         margin-left: 5px;
     }
-    .position{
+
+    .position {
         font-size: 18px;
         margin-right: 5px;
     }
-    .about{
+
+    .about {
         padding: 0 15px;
     }
-    .section-container{
+
+    .section-container {
         width: 90%;
     }
 
@@ -545,14 +611,16 @@ h1 {
         width: 60%;
     }
 
-    .body-text{
+    .body-text {
         width: 40%;
     }
 
 }
 
 @media (max-width: 1024px) {
-    .hello, .position {
+
+    .hello,
+    .position {
         font-size: 16px;
     }
 
@@ -567,18 +635,20 @@ h1 {
 
 }
 
-@media (max-width: 900px){
-    .section-container{
+@media (max-width: 900px) {
+    .section-container {
         flex-direction: column;
         width: 100%;
         gap: 50px;
     }
 
-    .profile-pic, .body-text {
+    .profile-pic,
+    .body-text {
         width: 100%;
     }
 
-    .about,.projects{
+    .about,
+    .projects {
         padding: 0 25px;
     }
 
@@ -592,7 +662,8 @@ h1 {
         text-align: right;
     }
 
-    .hello, .position {
+    .hello,
+    .position {
         font-size: 14px;
     }
 
@@ -605,17 +676,18 @@ h1 {
         width: 18px;
     }
 
-    .body-text{
-        width: 100%;;
+    .body-text {
+        width: 100%;
+        ;
     }
 
     .profile-pic {
         width: 80%;
     }
 
-    .body-text {
+    /* .body-text {
         text-align: center;
-    }
+    } */
 
     .projects-container {
         grid-template-columns: repeat(2, 1fr);
@@ -625,7 +697,8 @@ h1 {
         width: 100%;
     }
 
-    .about, .projects {
+    .about,
+    .projects {
         padding: 50px 15px;
     }
 
@@ -641,7 +714,8 @@ h1 {
         line-height: 14vw;
     }
 
-    .hello, .position {
+    .hello,
+    .position {
         font-size: 14px;
     }
 
@@ -663,7 +737,7 @@ h1 {
         grid-template-columns: 1fr;
     }
 
-    h2{
+    h2 {
         font-size: 22px !important;
     }
 

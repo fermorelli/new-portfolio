@@ -116,3 +116,4 @@ document.addEventListener("DOMContentLoaded", () => {
     codingObserver.observe(elements.coding.section);
     contactObserver.observe(elements.contact.section);
 });
+
