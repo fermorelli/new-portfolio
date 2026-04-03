@@ -297,6 +297,17 @@ main {
     overflow: hidden;
 }
 
+.case-card,
+.project-card {
+    cursor: pointer;
+}
+
+.case-card:focus-visible,
+.project-card:focus-visible {
+    outline: 2px solid rgba(250, 204, 73, 0.78);
+    outline-offset: 3px;
+}
+
 .panel::before,
 .case-card::before,
 .intro-note::before {
@@ -511,6 +522,8 @@ main {
     margin-top: 16px;
     font-weight: 700;
     color: #ffffff;
+    position: relative;
+    z-index: 1;
 }
 
 .case-content a {
@@ -628,8 +641,18 @@ main {
     }
 
     .site-header {
-        align-items: flex-start;
-        padding: 10px;
+        align-items: center;
+        padding: 10px 20px;
+        border-radius: 25px;
+    }
+
+    .brand {
+        min-height: 100%;
+    }
+
+    .brand-copy {
+        justify-content: center;
+        line-height: 1.15;
     }
 
     .menu-toggle {

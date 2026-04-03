@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const siteNav = document.querySelector(".site-nav");
     const navLinks = [...document.querySelectorAll(".site-nav a")];
     const revealItems = document.querySelectorAll(".reveal");
+    const clickableCards = document.querySelectorAll(".case-card[data-href], .project-card[data-href]");
     const sections = navLinks
         .map((link) => document.querySelector(link.getAttribute("href")))
         .filter(Boolean);
@@ -61,4 +62,39 @@ document.addEventListener("DOMContentLoaded", () => {
 
     setActiveLink();
     document.addEventListener("scroll", setActiveLink, { passive: true });
+
+    const openCardLink = (card) => {
+        const href = card.dataset.href;
+        const target = card.dataset.target;
+
+        if (!href) {
+            return;
+        }
+
+        if (target === "_blank") {
+            window.open(href, "_blank", "noopener,noreferrer");
+            return;
+        }
+
+        window.location.href = href;
+    };
+
+    clickableCards.forEach((card) => {
+        card.addEventListener("click", (event) => {
+            if (event.target.closest("a, button")) {
+                return;
+            }
+
+            openCardLink(card);
+        });
+
+        card.addEventListener("keydown", (event) => {
+            if (event.key !== "Enter" && event.key !== " ") {
+                return;
+            }
+
+            event.preventDefault();
+            openCardLink(card);
+        });
+    });
 });
