@@ -604,6 +604,11 @@ main {
     margin-bottom: 18px;
 }
 
+.accent-text,
+.case-type {
+    color: var(--petrol);
+}
+
 .hero h1,
 .section-heading h2,
 .contact-panel h2 {
@@ -791,7 +796,11 @@ main {
     margin-bottom: 28px;
 }
 
-.section-heading h2,
+.section-heading h2 {
+    font-size: clamp(2.8rem, 5vw, 5.6rem);
+    margin-bottom: 18px;
+}
+
 .contact-panel h2 {
     font-size: clamp(2rem, 4vw, 3.4rem);
     margin-bottom: 16px;
@@ -1011,7 +1020,7 @@ main {
     display: inline-flex;
     margin-top: 16px;
     font-weight: 700;
-    color: #ffffff;
+    color: var(--petrol);
     position: relative;
     z-index: 1;
 }
@@ -1146,7 +1155,7 @@ main {
 
 .contact-panel .button {
     min-height: 52px;
-    border-radius: 999px;
+    border-radius: 0;
     padding: 0 22px;
 }
 
@@ -1607,9 +1616,8 @@ main {
         font-size: clamp(2.5rem, 12vw, 4.3rem);
     }
 
-    .section-heading h2,
-    .contact-panel h2 {
-        font-size: clamp(1.8rem, 8vw, 2.5rem);
+    .section-heading h2 {
+        font-size: clamp(2.35rem, 11vw, 3.6rem);
     }
 
     .hero-photo,
